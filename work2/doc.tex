@@ -31,36 +31,244 @@
     姓名：何飞杭 \qquad 学号：202631101066
 \end{center}
 
-\noindent\textbf{1.	(1)推导奥尔特公式，得到视向速度和切向速度随银经变化的关系以及奥尔特常数A、B。}
+\noindent\textbf{1. (1) 推导奥尔特公式，得到视向速度和切向速度随银经变化的关系以及奥尔特常数A、B。}
 
+\vspace{15em}
 
-
-\vspace{24.25em}
+\[V_r = V \cos \alpha - V_0 \sin l\]
+其中
+\[\cos \alpha = \frac{R_0}{R} \sin l\]
+所以：
+\[V_r = V \frac{R_0}{R} \sin l - V_0 \sin l = R_0(\frac{V}{R} - \frac{V_0}{R_0}) \sin l\]
+------------------------------------------------------------------------------------------------------------------------------------
+\[V_t = V \sin \alpha - V_0 \cos l\]
+其中
+\[\sin \alpha = \frac{R_0 \cos l-r}{R}\]
+所以：
+\[V_t = V \frac{R_0 \cos l - r}{R} - V_0 \cos l = R_0(\frac{V}{R} - \frac{V_0}{R_0}) \cos l - \frac{V}{R} r\]
+------------------------------------------------------------------------------------------------------------------------------------
+\[\frac{V}{R} = \frac{V_0}{R_0} + \frac{\mathrm{d}(V/R)}{\mathrm{d}R}(R-R_0) = \frac{V_0}{R_0} + \frac{1}{R_0^2}[R_0\frac{\mathrm{d}(V)}{\mathrm{d}R} - V_0](R-R_0)\]
+对于 \(R \approx R_0 >> r\)
+\[R = \sqrt{R_0^2 + r^2 - 2 R_0 r \cos l} \approx R_0 - r \cos l\]
+所以：
+\[\frac{V}{R} - \frac{V_0}{R_0} \approx \frac{1}{R_0^2}[R_0\frac{\mathrm{d}(V)}{\mathrm{d}R} - V_0](-r  \cos l) = -\frac{1}{R_0^2}[R_0\frac{\mathrm{d}(V)}{\mathrm{d}R} - V_0]r \cos l\]
+------------------------------------------------------------------------------------------------------------------------------------
+定义奥尔特常数：
+\[
+A=\frac{1}{2}\left(\frac{V_0}{R_0}-\frac{\mathrm{d}V}{\mathrm{d}R}\right)
+\]
+因此：
+\[
+\frac{1}{R_0^2}\left(R_0\frac{\mathrm{d}V}{\mathrm{d}R}-V_0\right)
+=-\frac{2A}{R_0}
+\]
+代入前面的结果：
+\[
+\frac{V}{R}-\frac{V_0}{R_0}
+\approx \frac{2A}{R_0}r\cos l
+\]
+代入视向速度得：
+\[
+V_r=2Ar\sin l\cos l
+\]
+利用二倍角公式：
+\[
+V_r=Ar\sin 2l
+\]
+------------------------------------------------------------------------------------------------------------------------------------
+由于 \(R\approx R_0\)，因此：
+\[
+\frac{V}{R}\approx\frac{V_0}{R_0}
+\]
+代入切向速度得到：
+\[
+V_t=2Ar\cos^2 l-\frac{V_0}{R_0}r
+\]
+利用二倍角公式：
+\[
+V_t=Ar(1+\cos 2l)-\frac{V_0}{R_0}r
+\]
+定义第二个奥尔特常数：
+\[
+B=-\frac{1}{2}\left(\frac{V_0}{R_0}
++\frac{\mathrm{d}V}{\mathrm{d}R}\right)
+\]
+由 \(A\) 和 \(B\) 的定义可得：
+\[
+B=A-\frac{V_0}{R_0}
+\]
+因此：
+\[
+V_t=Ar\cos 2l+Br
+\]
+------------------------------------------------------------------------------------------------------------------------------------
+综上，视向速度和切向速度随银经变化的关系为：
+\[
+V_r = Ar\sin 2l,\; V_t = Ar\cos 2l+Br
+\]
+其中，奥尔特常数 \(A\)、\(B\) 分别为：
+\[
+A=\frac{1}{2}\left(\frac{V_0}{R_0} -\frac{\mathrm{d}V}{\mathrm{d}R}\right),\; B=-\frac{1}{2}\left(\frac{V_0}{R_0} +\frac{\mathrm{d}V}{\mathrm{d}R}\right)
+\]
 
 \vspace{0.5em}
 
-\noindent\textbf{2.	一对目视双星的两颗子星：一颗视星等为1\(^\mathrm{m}\)，另一颗视星等为2\(^\mathrm{m}\)，问这个双星系统的星等是多少？}
+\noindent\textbf{(2) 根据太阳附近A、B的测量值判断该处是对应上升还是下降的旋转曲线？}
 
 \vspace{0.25em}
 \[m = -2.5 \log_{10}\frac{f_1 + f_2}{f_0} = -2.5 \log_{10}(10^{-0.4 m_1} + 10^{-0.4 m_2}) \approx 0.638\]
 \vspace{0.5em}
 
-\noindent\textbf{3.	已测得南门二(半人马座\(\alpha\)星)和心宿二(天蝎座\(\alpha\)星)的目视星等分别为-0.01\(^\mathrm{m}\)和1.0\(^\mathrm{m}\)，并测量得到它们的距离分别为1.34pc和170pc，求它们的光度之比。}
+\noindent\textbf{2. (1) 太阳(系)在轨道上绕着银河系中心公转一周的时间，称为银河年或宇宙年。请根据两个基本量R0、V0的数值计算银河年的大小。}
 
 \vspace{0.25em}
-\[M_1 = m_1 - 5 \log_{10}(\frac{d_1}{10}) \approx 4.355 \quad M_2 = m_2 - 5 \log_{10}(\frac{d_2}{10}) \approx -5.15\]
-\[L_1/L_2 = 10^{0.4(M_2 - M_1)} \approx 10^{0.4(-5.15-4.355)} \approx 10^{0.4(-9.505)} \approx 10^{-3.802} \approx 1.58 \times 10^{-4}\]
+\noindent 太阳到银河系中心的距离：
+\[R_0 = 8.5\ \mathrm{kpc}\]
+太阳附近的圆周旋转速度：
+\[V_0 = 220\ \mathrm{km/s}\]
+所以银河年为：
+\[T = \frac{2 \pi R_0}{V_0} \approx 2.4 \times 10^8\ \mathrm{yr}\]
 \vspace{0.5em}
 
-\noindent\textbf{4.	(1)关于星系的哈勃分类，请查找资料解释什么是早型星系？什么是晚型星系？}
+\noindent\textbf{(2) 假设在太阳轨道半径处猎户臂密度波速是120km/s，求自太阳诞生以来46亿年太阳已穿行猎户臂多少次？}
 
 \vspace{0.25em}
-早型星系（early-type galaxies）主要是椭圆星系 E 和透镜状星系 S0，通常以球状/核球结构为主、冷气体少、恒星形成活动弱、恒星总体较老；晚型星系（late-type galaxies）主要是旋涡和不规则星系，通常具有明显的盘结构、较丰富的冷气体和尘埃以及更活跃的恒星形成。
+\noindent 相对速度为：
+\[V_\mathrm{rel} = V_0 - V_\mathrm{arm} = 220 - 120 = 100\ \mathrm{km/s}\]
+太阳穿行猎户臂的时间为：
+\[T_\mathrm{cross} = \frac{2 \pi R_0}{V_\mathrm{rel}} \approx 5.22 \times 10^8\ \mathrm{yr}\]
+所以太阳在46亿年中穿行猎户臂的次数为：
+\[N = \frac{4.6 \times 10^9}{5.22 \times 10^8} \approx 8.81\]
+因此太阳大约穿过猎户臂密度波8次
 \vspace{0.5em}
 
-\noindent\textbf{(2)早型星系是比晚型星系更年轻的星系。请判断并解释理由。}
+\noindent\textbf{3. 距离为d Mpc的一个星系：\\
+(1) 在地球上观测这个星系，证明星系 \(1''\) 区域对应于4.848d pc。}
 
 \vspace{0.25em}
-这里的 early/late 是形态序列上的“早/晚”，类似于“序列的前端/后端”，不是形成时间上的早/晚。此外，早型星系通常以老年恒星为主，恒星形成活动较弱；晚型星系含有更多冷气体和尘埃，恒星形成活动更活跃，因此通常包含更多年轻恒星。
+\noindent 当角度很小时：
+\[\tan \theta \approx \theta\]
+又因为：
+\[\theta = 1'' = \frac{1}{3600} \times \frac{\pi}{180} \approx 4.848 \times 10^{-6}\ \mathrm{rad}\]
+所以：
+\[L = D \theta \approx 4.848d pc\]
+\vspace{0.5em}
+
+\noindent\textbf{(2) 利用视星等和流量、绝对星等和光度的关系，证明星系的表面亮度满足如下换算关系：
+\[\boxed{
+I(\mathrm{mag/arcsec^2})
+=M_\odot+21.572-2.5\log_{10}L
+}\]}
+
+\vspace{0.25em}
+\noindent 视星等与流量的关系为：
+\[m = - 2.5 \log_{10} F + C\]
+绝对星等与光度的关系为：
+\[M - M_\odot = - 2.5 \log_{10} (\frac{L}{L_\odot})\]
+因此，$1\,\mathrm{arcsec}^2$ 对应的实际面积为：
+\[S = (4.848 d)^2\ \mathrm{pc}^2\]
+设星系的面光度为 $L$，单位为
+$L_\odot/\mathrm{pc}^2$，则该区域内的总光度为：
+\[
+L_{\mathrm{total}}=L(4.848d)^2
+\]
+根据绝对星等与光度的关系，该区域的绝对星等为：
+\[
+M=M_\odot-2.5\log_{10}
+\left[L(4.848d)^2\right]
+\]
+距离模数为：
+\[
+m-M=5\log_{10}D-5
+\]
+其中 $D$ 以 $\mathrm{pc}$ 为单位，由于：
+\[
+D=d\times10^6\,\mathrm{pc}
+\]
+所以：
+\[
+m-M=5\log_{10}d+25
+\]
+代入得到：
+\[
+\begin{aligned}
+m={}&M_\odot-2.5\log_{10}
+\left[L(4.848d)^2\right]\\
+&+5\log_{10}d+25
+\end{aligned}
+\]
+展开对数：
+\[
+\begin{aligned}
+m={}&M_\odot-2.5\log_{10}L\\
+&-5\log_{10}(4.848)
+-5\log_{10}d\\
+&+5\log_{10}d+25
+\end{aligned}
+\]
+化简可得：
+\[
+m=M_\odot+25-5\log_{10}(4.848)
+-2.5\log_{10}L
+\]
+由于：
+\[
+25-5\log_{10}(4.848)=21.572
+\]
+又因为计算的是单位角面积内的视星等，
+即星系的表面亮度 $I$，因此：
+\[I(\mathrm{mag/arcsec^2})
+=M_\odot+21.572-2.5\log_{10}L\]
+\vspace{0.5em}
+
+\noindent\textbf{(3) 如果测得该星系B波段面亮度\(I_B = 27 mag \cdot arcsec^-2\)，与太阳相比，该星系的一平方角秒发射了多少 B 波段的光？  （太阳相关数据：\(M_{⊙V} = 4.83，B-V=0.65\)）}
+
+\vspace{0.25em}
+\noindent 已知星系的 B 波段表面亮度为：
+\[
+I_B=27\ \mathrm{mag/arcsec^2}
+\]
+太阳的 V 波段绝对星等及颜色指数分别为：
+\[
+M_{\odot V}=4.83,\qquad B-V=0.65
+\]
+首先，根据颜色指数的定义：
+\[
+B-V=M_{\odot B}-M_{\odot V}
+\]
+得到太阳的 B 波段绝对星等：
+\[
+M_{\odot B}=M_{\odot V}+(B-V)
+=4.83+0.65=5.48
+\]
+根据上一问得到的表面亮度与面光度之间的换算关系：
+\[
+I_B=M_{\odot B}+21.572
+-2.5\log_{10}L_B
+\]
+将已知数据代入：
+\[
+27=5.48+21.572-2.5\log_{10}L_B
+\]
+整理得：
+\[
+2.5\log_{10}L_B=5.48+21.572-27
+\]
+即：
+\[
+\log_{10}L_B=\frac{0.052}{2.5}=0.0208
+\]
+因此：
+\[
+L_B=10^{0.0208}\approx1.05
+\]
+最终得到：
+\[
+L_B\approx1.05\ L_{\odot B}/\mathrm{pc}^2
+\]
+即该星系的 B 波段面光度约为
+$1.05\ L_{\odot B}/\mathrm{pc}^2$，
+表示每平方秒差距的实际面积所对应的 B 波段光度，
+约为太阳 B 波段光度的 1.05 倍。
 
 \end{document}
