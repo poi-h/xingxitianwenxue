@@ -1,0 +1,173 @@
+\documentclass{ctexart}
+
+% 常用宏包
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+% 页面设置
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=2.5cm,
+    bottom=2.5cm
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE 《星系天文学》第4章作业}
+
+    \vspace{1em}
+
+    姓名：何飞杭 \qquad 学号：202631101066
+\end{center}
+
+\noindent\textbf{1.	什么是贫金属星\(\alpha\)元素增丰？解释其形成原因。}
+
+\vspace{0.25em}
+
+贫金属星的\(\alpha\)元素增丰是指贫金属恒星中，氧、镁、硅、硫、钙等\(\alpha\)元素相对于铁元素的丰度比高于太阳，即 \([\alpha/\mathrm{Fe}]>0\)。其形成主要与早期宇宙的超新星核合成和星系化学演化有关：大质量恒星演化时间较短，其发生的核心坍缩超新星（II 型超新星）优先向星际介质释放大量\(\alpha\)元素，而产生大量铁元素的 Ia 型超新星具有较长的延迟时间。因此，在 Ia 型超新星充分贡献铁之前，由早期富含\(\alpha\)元素的星际介质形成的恒星便表现出\(\alpha\)元素增丰现象。
+
+\vspace{0.5em}
+
+\noindent\textbf{2.	如果在恒星最初开始形成的\(t = 0\)时刻，盘气体有\(Z(0) = 0.15Z_{\odot}\)，并且\(M_g(t = 0)/M_g(t) = 50 / 13\)。用单区瞬时循环模型估计当前满足\(Z < Z_{\odot}/4\)的小质量恒星所占的比例。}
+
+\vspace{0.25em}
+
+采用单区瞬时循环模型，金属丰度演化方程为
+\[
+Z(t)-Z(0)=p\ln\frac{M_g(0)}{M_g(t)},
+\]
+
+已知初始金属丰度为
+\[
+Z(0)=0.15Z_\odot,
+\]
+且
+\[
+\frac{M_g(0)}{M_g(t)}=\frac{50}{13}.
+\]
+
+设气体金属丰度达到 \(Z_\odot/4\) 时的气体质量为 \(M_g'\)。由金属丰度演化方程可得
+\[
+\frac{Z_\odot/4-Z(0)}{Z(t)-Z(0)}
+=
+\frac{\ln[M_g(0)/M_g']}
+{\ln[M_g(0)/M_g(t)]}.
+\]
+
+代入已知条件：
+\[
+\frac{0.25-0.15}{1-0.15}
+=
+\frac{\ln[M_g(0)/M_g']}
+{\ln(50/13)}.
+\]
+
+整理得
+\[
+\frac{M_g'}{M_g(0)}
+=
+\left(\frac{13}{50}\right)^{\frac{0.1}{0.85}}
+\approx 0.8534.
+\]
+
+由于低质量恒星形成后可以长期存留，因此金属丰度低于 \(Z_\odot/4\) 的恒星比例，等于金属丰度达到该阈值之前形成的恒星质量占总形成恒星质量的比例，即
+\[
+f=
+\frac{M_g(0)-M_g'}{M_g(0)-M_g(t)}.
+\]
+
+代入数据：
+\[
+f=
+\frac{1-0.8534}{1-\frac{13}{50}}
+\approx 0.198.
+\]
+
+\vspace{0.5em}
+
+\noindent\textbf{3.	假设贫金属气体的内流正比于新恒星形成的速率，所以对于某个\(\nu > 0\)的常数有\(\Delta M* + \Delta Mg = \nu\Delta M*\)，求该情况下气体的金属丰度\(Z(t)\)。}
+
+\vspace{0.25em}
+
+根据题目给出的质量守恒关系：
+\[
+\Delta M_*+\Delta M_g=\nu\Delta M_*,
+\]
+可得
+\[
+dM_g=(\nu-1)dM_*,
+\qquad
+dM_*=\frac{dM_g}{\nu-1}.
+\]
+
+由于贫金属气体内流的金属丰度近似为零，根据金属质量守恒方程：
+\[
+d(ZM_g)=y\,dM_*-Z\,dM_*,
+\]
+展开得
+\[
+M_gdZ+ZdM_g=(y-Z)dM_*.
+\]
+
+代入质量守恒关系：
+\[
+M_gdZ+ZdM_g
+=\frac{y-Z}{\nu-1}dM_g.
+\]
+
+整理得
+\[
+\frac{dZ}{y-\nu Z}
+=\frac{1}{\nu-1}\frac{dM_g}{M_g}.
+\]
+
+两边积分：
+\[
+\int_{Z(0)}^{Z(t)}\frac{dZ}{y-\nu Z}
+=
+\frac{1}{\nu-1}
+\int_{M_g(0)}^{M_g(t)}\frac{dM_g}{M_g}.
+\]
+
+得到
+\[
+-\frac{1}{\nu}
+\ln\frac{y-\nu Z(t)}{y-\nu Z(0)}
+=
+\frac{1}{\nu-1}
+\ln\frac{M_g(t)}{M_g(0)}.
+\]
+
+最终得到气体金属丰度的演化关系：
+\[
+\boxed{
+Z(t)=\frac{y}{\nu}
+-\left[\frac{y}{\nu}-Z(0)\right]
+\left[\frac{M_g(t)}{M_g(0)}\right]^{\frac{\nu}{\nu-1}}
+}
+\]
+
+若初始气体金属丰度为零，即 \(Z(0)=0\)，则
+\[
+\boxed{
+Z(t)=\frac{y}{\nu}
+\left[
+1-\left(\frac{M_g(t)}{M_g(0)}\right)^{
+\frac{\nu}{\nu-1}}
+\right].
+}
+\]
+
+
+\end{document}
