@@ -113,28 +113,28 @@ dM_*=\frac{dM_g}{\nu-1}.
 
 由于贫金属气体内流的金属丰度近似为零，根据金属质量守恒方程：
 \[
-d(ZM_g)=y\,dM_*-Z\,dM_*,
+d(ZM_g)=p\,dM_*-Z\,dM_*,
 \]
 展开得
 \[
-M_gdZ+ZdM_g=(y-Z)dM_*.
+M_gdZ+ZdM_g=(p-Z)dM_*.
 \]
 
 代入质量守恒关系：
 \[
 M_gdZ+ZdM_g
-=\frac{y-Z}{\nu-1}dM_g.
+=\frac{p-Z}{\nu-1}dM_g.
 \]
 
 整理得
 \[
-\frac{dZ}{y-\nu Z}
+\frac{dZ}{p-\nu Z}
 =\frac{1}{\nu-1}\frac{dM_g}{M_g}.
 \]
 
 两边积分：
 \[
-\int_{Z(0)}^{Z(t)}\frac{dZ}{y-\nu Z}
+\int_{Z(0)}^{Z(t)}\frac{dZ}{p-\nu Z}
 =
 \frac{1}{\nu-1}
 \int_{M_g(0)}^{M_g(t)}\frac{dM_g}{M_g}.
@@ -143,7 +143,7 @@ M_gdZ+ZdM_g
 得到
 \[
 -\frac{1}{\nu}
-\ln\frac{y-\nu Z(t)}{y-\nu Z(0)}
+\ln\frac{p-\nu Z(t)}{p-\nu Z(0)}
 =
 \frac{1}{\nu-1}
 \ln\frac{M_g(t)}{M_g(0)}.
@@ -151,23 +151,97 @@ M_gdZ+ZdM_g
 
 最终得到气体金属丰度的演化关系：
 \[
-\boxed{
-Z(t)=\frac{y}{\nu}
--\left[\frac{y}{\nu}-Z(0)\right]
+Z(t)=\frac{p}{\nu}
+-\left[\frac{p}{\nu}-Z(0)\right]
 \left[\frac{M_g(t)}{M_g(0)}\right]^{\frac{\nu}{\nu-1}}
-}
 \]
 
 若初始气体金属丰度为零，即 \(Z(0)=0\)，则
 \[
-\boxed{
-Z(t)=\frac{y}{\nu}
+Z(t)=\frac{p}{\nu}
 \left[
 1-\left(\frac{M_g(t)}{M_g(0)}\right)^{
 \frac{\nu}{\nu-1}}
 \right].
-}
 \]
 
+\vspace{0.5em}
+
+\noindent\textbf{4.	dSph星系/星团的核半径\(r_c\)是指面亮度降到中心值一半时到中心的距离。假设根据位力定理，dSph星系/星团的质量\(M \sim \sigma_r^2r_c\)，其中\(\sigma_r\)为速度弥散。试求下面表格中船底座矮椭球星系的质量与球状星团半人马座\(\omega\)的质量的比例关系，以及二者质光比的比例关系。}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{fig1.png}
+    % \caption{}
+    \label{}
+\end{figure}
+
+\vspace{0.25em}
+
+根据位力定理，dSph 星系和球状星团的质量近似满足
+\[
+M \sim \sigma_r^2 r_c
+\]
+
+从表格中读取船底座矮椭球星系和半人马座 $\omega$ Cen
+球状星团的参数：
+
+\[
+\begin{aligned}
+\sigma_{\rm Carina} &= 7~\mathrm{km\,s^{-1}}, &
+r_{\rm Carina} &= 200~\mathrm{pc}, \\
+\sigma_{\omega\rm Cen} &= 20~\mathrm{km\,s^{-1}}, &
+r_{\omega\rm Cen} &= 4~\mathrm{pc}.
+\end{aligned}
+\]
+
+因此，两者的质量比为
+\[
+\begin{aligned}
+\frac{M_{\rm Carina}}{M_{\omega\rm Cen}}
+&=
+\frac{\sigma_{\rm Carina}^2 r_{\rm Carina}}
+{\sigma_{\omega\rm Cen}^2 r_{\omega\rm Cen}}\\
+&=\frac{7^2\times 200}{20^2\times 4}\\
+&\approx 6.13.
+\end{aligned}
+\]
+
+即船底座矮椭球星系的质量约为半人马座
+$\omega$ Cen 球状星团的 $6.13$ 倍。
+
+质光比定义为 $M/L_V$，由表格可知：
+\[
+L_{\rm Carina}=0.04\times10^7L_\odot,
+\qquad
+L_{\omega\rm Cen}=0.1\times10^7L_\odot.
+\]
+
+因此，两者的质光比之比为
+\[
+\begin{aligned}
+\frac{(M/L_V)_{\rm Carina}}
+{(M/L_V)_{\omega\rm Cen}}
+&=
+\frac{M_{\rm Carina}}{M_{\omega\rm Cen}}
+\frac{L_{\omega\rm Cen}}{L_{\rm Carina}}\\
+&=6.13\times\frac{0.1}{0.04}\\
+&\approx 15.31.
+\end{aligned}
+\]
+
+综上：
+\[
+\frac{M_{\rm Carina}}{M_{\omega\rm Cen}}
+\approx 6.13
+\]
+\[
+\frac{(M/L_V)_{\rm Carina}}
+{(M/L_V)_{\omega\rm Cen}}
+\approx 15.31
+\]
+
+船底座矮椭球星系的质光比约为半人马座
+$\omega$ Cen 球状星团的 $15.31$ 倍。
 
 \end{document}
